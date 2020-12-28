@@ -1,0 +1,28 @@
+{
+    "name": "create-pandajs-game",
+    "version": "0.0.1",
+    "author": "Zaki Hanafiah",
+    "license": "MIT",
+    "dependencies": {
+        "panda-toolkit": "^2.1.3"
+    },
+    "devDependencies": {
+        "copyfiles": "^2.4.1",
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^7.1.0",
+        "gulp": "^4.0.2",
+        "gulp-html-replace": "^1.6.2",
+        "live-server": "^1.2.1",
+        "prettier": "2.2.1",
+        "rimraf": "^2.7.1"
+    },
+    "scripts": {
+        "init": "npx panda create game --dev && ./scripts/build.sh && npx gulp initFavicons && echo 'Successfully initialized game project.'",
+        "update-engine": "cd game && npx panda update --dev && cd ../",
+        "build:game": "cd game && npx panda build && cd ../ && npx copyfiles -f ./game/game.min.js public && npx rimraf ./game/game.min.js && echo 'Game build successfully created.'",
+        "build:assets": "npx gulp copyAssets && echo 'Assets successfully compiled.'",
+        "build": "npm run build:game && npm run build:assets && npx gulp buildIndex && echo 'Production build successfully created.'",
+        "dev": "npx live-server --port=8081 --open=./game/index.html --watch=./game",
+        "serve": "npm run build && npx live-server --port=8082 --open=./public"
+    }
+}

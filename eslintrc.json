@@ -1,0 +1,10 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "script"
+    },
+    "extends": ["prettier"],
+    "rules": {
+        "max-len": [0, 120, 2, { "ignoreUrls": true }]
+    }
+}
