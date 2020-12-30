@@ -17,8 +17,8 @@
         "rimraf": "^2.7.1"
     },
     "scripts": {
-        "init": "npx panda create game --dev && ./scripts/build.sh && npx gulp initFavicons && echo 'Successfully initialized game project.'",
-        "update-engine": "npx panda update --dev && cd ../",
+        "init": "npx panda create game dev && ./scripts/build.sh && npx gulp initFavicons && echo 'Successfully initialized game project.'",
+        "update-engine": "npx panda update dev && cd ../",
         "build:game": "cd game && npx panda build && cd ../ && npx copyfiles -f ./game/game.min.js public && npx rimraf ./game/game.min.js && echo 'Game build successfully created.'",
         "build:assets": "npx gulp copyAssets && echo 'Assets successfully compiled.'",
         "build:ci": "npm run init && npm run build:game && npm run build:assets && npx gulp buildIndex && echo 'Production build successfully created.'",
