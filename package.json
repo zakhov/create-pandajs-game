@@ -18,9 +18,10 @@
     },
     "scripts": {
         "init": "npx panda create game --dev && ./scripts/build.sh && npx gulp initFavicons && echo 'Successfully initialized game project.'",
-        "update-engine": "cd game && npx panda update --dev && cd ../",
+        "update-engine": "npx panda update --dev && cd ../",
         "build:game": "cd game && npx panda build && cd ../ && npx copyfiles -f ./game/game.min.js public && npx rimraf ./game/game.min.js && echo 'Game build successfully created.'",
         "build:assets": "npx gulp copyAssets && echo 'Assets successfully compiled.'",
+        "build:ci": "npm run init && npm run build:game && npm run build:assets && npx gulp buildIndex && echo 'Production build successfully created.'",
         "build": "npm run build:game && npm run build:assets && npx gulp buildIndex && echo 'Production build successfully created.'",
         "dev": "npx live-server --port=8081 --open=./game/index.html --watch=./game",
         "serve": "npm run build && npx live-server --port=8082 --open=./public"
