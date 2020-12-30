@@ -12,6 +12,8 @@ Startup template for building games with PandaJS
 
 #### About Panda2 / PandaJS
 
+[![Panda 2 Logo](https://www.panda2.io/img/logo_github.png)](https://www.panda2.io/)
+
 - [Panda2.io](https://www.panda2.io/) is a HTML5 game development platform made by [Eemeli Kelokorpi](https://github.com/ekelokorpi). Its based on Goodboy's PixiJS renderer v2 and while it's the less popular compared its contemporaries, it offers a relatively simple learning curve and the documentation provided is easy enough for anyone to pickup and learn the basics of game development and publish games in no time at all.
 - While Panda2 provides a powerful editor and bundling / deployment to multi-platforms, the engine itself is open source and can be updated using the `panda-toolkit` library.
 
