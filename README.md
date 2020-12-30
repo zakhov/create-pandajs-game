@@ -81,7 +81,7 @@ Vercel deployment link connected with this repository can be found below:
 
 https://create-pandajs-game.vercel.app
 
-*Do note that the since the repository is merely a template and doesn't include the Panda2 engine by default, the build script is using `npm run build:ci` as it includes the `npm run init` command necessary to setup the Panda2 engine source files needed to complete the **build**  process.
+*Do note that since the repository is merely a template and doesn't include the Panda2 engine by default, the build script is using `npm run build:ci` as it includes the `npm run init` command necessary to setup the Panda2 engine source files needed to complete the **build**  process.
 
 *If you have ran the initial setup via `npm run init` and pushed the `game` folder to your repository, just simply doing `npm run build` should work fine.
 
