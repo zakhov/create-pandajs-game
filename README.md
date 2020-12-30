@@ -6,7 +6,8 @@ Startup template for building games with PandaJS
 2. [Why](#why)
 3. [Setup](#setup)
 4. [Tools](#tools)
-5. [Vercel](#deploying-to-vercel)
+5. [Workflows](#workflows)
+6. [Vercel](#deploying-to-vercel)
 
 
 #### About Panda2 / PandaJS
